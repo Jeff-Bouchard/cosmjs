@@ -1,6 +1,6 @@
 export { isValidBuilder } from "./builder";
 export { Expiration } from "./interfaces";
-export { setupWasmExtension, WasmExtension } from "./lcdapi/wasm";
+export { CodeInfo, ContractInfo, setupWasmExtension, WasmExtension } from "./lcdapi/wasm";
 export { BankMsg, CosmosMsg, CustomMsg, StakingMsg, WasmMsg } from "./cosmosmsg";
 export {
   Account,
@@ -56,4 +56,4 @@ export {
   MsgUpdateAdmin,
   MsgStoreCode,
 } from "./msgs";
-export { JsonObject, parseWasmData, WasmData } from "./types";
+export { JsonObject, Model, parseWasmData, WasmData } from "./types";

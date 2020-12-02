@@ -92,7 +92,7 @@ function uint64FromProto(input: number | Long | null | undefined): Uint64 {
   return Uint64.fromString(input.toString());
 }
 
-function accountFromProto(input: cosmos.auth.v1beta1.IBaseAccount): Account {
+export function accountFromProto(input: cosmos.auth.v1beta1.IBaseAccount): Account {
   const { address, pubKey, accountNumber, sequence } = input;
   const pubkey = decodePubkey(pubKey);
   assert(address);

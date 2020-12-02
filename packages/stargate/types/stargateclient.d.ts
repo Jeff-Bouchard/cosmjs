@@ -1,5 +1,6 @@
 import { Block, Coin, PubKey, SearchTxFilter, SearchTxQuery } from "@cosmjs/launchpad";
 import { Client as TendermintClient } from "@cosmjs/tendermint-rpc";
+import { cosmos } from "./codec";
 /** A transaction that is indexed as part of the transaction history */
 export interface IndexedTx {
   readonly height: number;
@@ -43,6 +44,7 @@ export declare function isBroadcastTxSuccess(result: BroadcastTxResponse): resul
 export declare function assertIsBroadcastTxSuccess(
   result: BroadcastTxResponse,
 ): asserts result is BroadcastTxSuccess;
+export declare function accountFromProto(input: cosmos.auth.v1beta1.IBaseAccount): Account;
 /** Use for testing only */
 export interface PrivateStargateClient {
   readonly tmClient: TendermintClient;
